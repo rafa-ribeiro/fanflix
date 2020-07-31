@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
+// import GifIframeResponsive from './components/GifIframeResponsive';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -27,7 +28,7 @@ export default function BannerMain({
           </ContentAreaContainer.Title>
 
           <ContentAreaContainer.Description>
-            {videoDescription}
+              {videoDescription}
           </ContentAreaContainer.Description>
         </ContentAreaContainer.Item>
 
@@ -35,11 +36,35 @@ export default function BannerMain({
           <VideoIframeResponsive
             youtubeID={youTubeID}
           />
-          <WatchButton>
-            Assistir
-          </WatchButton>
+          {/* <GifIframeResponsive/> */}
+
         </ContentAreaContainer.Item>
       </ContentAreaContainer>
     </BannerMainContainer>
   );
+
+  // return (
+  //   <BannerMainContainer backgroundImage={bgUrl}>
+  //     <ContentAreaContainer>
+  //       <ContentAreaContainer.Item>
+  //         <ContentAreaContainer.Title>
+  //           {videoTitle}
+  //         </ContentAreaContainer.Title>
+
+  //         <ContentAreaContainer.Description>
+  //             {videoDescription}
+  //         </ContentAreaContainer.Description>
+  //       </ContentAreaContainer.Item>
+
+  //       <ContentAreaContainer.Item>
+  //         <VideoIframeResponsive
+  //           youtubeID={youTubeID}
+  //         />
+  //         <WatchButton>
+  //           Assistir
+  //         </WatchButton>
+  //       </ContentAreaContainer.Item>
+  //     </ContentAreaContainer>
+  //   </BannerMainContainer>
+  // );
 }

@@ -1,20 +1,22 @@
 import React from 'react';
-import Menu from './components/Menu';
-import BannerMain from './components/BannerMain';
-import dadosIniciais from './data/dados_iniciais.json';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
+import Menu from '../../components/Menu';
+import BannerMain from '../../components/BannerMain';
+import dadosIniciais from '../../data/dados_iniciais.json';
+import Carousel from '../../components/Carousel';
+import Footer from '../../components/Footer';
 
 
-function App() {
+function Home() {
   return (
     <div style={{ background: "#141414" }}>
       <Menu/>
 
       <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
+        videoTitle="Eu sou fã de ..."
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"}
+        videoDescription={
+            "Compartilhe seus gostos e ajude outros a entender porque você é tão fã daquela banda, ou daquele livro, game, podcast ou de qualquer outra coisa que nos faça bem"
+        }
       />
 
 <Carousel
@@ -48,4 +50,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
